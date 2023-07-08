@@ -1,6 +1,8 @@
 import React from 'react';
 import user from './user.json';
 import './App.css';
+import './FriendList.css'
+
 
 const Profile = () =>{
   const { username, tag, location, avatar, stats } = user;

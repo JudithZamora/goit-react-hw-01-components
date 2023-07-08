@@ -3,12 +3,13 @@ import Profile from './Profile';
 import Statistics from './Statistics';
 import FriendList from './FriendList';
 import TransactionHistory from './TransactionHistory';
-import './App.css';
+
 
 import userData from './user.json';
 import statisticsData from './data.json';
 import friendData from './friends.json';
 import transactionData from './transactions.json';
+import './App.css';
 
 function App() {
   return (
