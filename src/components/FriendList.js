@@ -4,7 +4,7 @@ const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
       {friends.map((friend) => (
-        <li className="item" key={friend.id}>
+        <li className="item-f" key={friend.id}>
           <span
             className="status"
             style={{ backgroundColor: friend.isOnline ? 'green' : 'red' }}
