@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import 'index.css';
 
 const Statistics = ({ title, stats }) => {
   
@@ -6,7 +8,9 @@ const Statistics = ({ title, stats }) => {
 
   return (
     <section className="statistics">
-      <h2 className="title">{title}</h2>
+      {title && (
+        <h2 className="title">{title}</h2>
+      )}
       <ul className="stat-list">
         {stats.map((stat, index) => (
           <li className="item" key={stat.id}>
@@ -21,6 +25,16 @@ const Statistics = ({ title, stats }) => {
       </ul>
     </section>
   );
+};
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Statistics;
